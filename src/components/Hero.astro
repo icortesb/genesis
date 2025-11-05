@@ -1,8 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+// CAMBIO: Importamos la nueva imagen 'opening.jpg'
+import heroImage from '../../public/opening.jpg';
 ---
 
 <section class="py-20 md:py-32 bg-gradient-to-br from-wine/10 to-olive/10">
-  <div class="container grid md:grid-cols-2 gap-8 items-center min-h-screen flex items-center">
+  <div class="container grid md:grid-cols-2 gap-8 items-center min-h-screen">
     <div>
       <h1 class="text-wine mb-6 leading-tight">Descubrí Mendoza a tu manera</h1>
       <p class="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -13,7 +16,17 @@
         <a href="#contacto" class="btn btn-secondary">Reservar ahora</a>
       </div>
     </div>
-    <div class="bg-gray-300 rounded-2xl aspect-square"></div>
+    
+    <div class="rounded-2xl aspect-square overflow-hidden">
+      <Image 
+        src={heroImage} 
+        alt="Túnel abriéndose a la vista del Dique Potrerillos y las montañas de Mendoza" 
+        class="w-full h-full object-cover"
+        widths={[400, 800]}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        loading="eager"
+      />
+    </div>
   </div>
 </section>
 

@@ -1,7 +1,5 @@
 ---
 // He añadido SVGs para los iconos de Menú y Cierre (X)
-// ya que el proyecto no tiene Astro React configurado para usar `lucide-react`.
-
 const menuIcon = `
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
   <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -29,9 +27,9 @@ const xIcon = `
       <a href="#contacto" class="hover:text-olive">Contacto</a>
     </nav>
 
-    <button class="btn btn-primary text-sm hidden md:block">Reservar</button>
+    <a href="#contacto" class="btn btn-primary text-sm !hidden md:inline-block">Reservar</a>
 
-    <button id="mobile-menu-toggle" class="md:hidden p-2 text-wine" aria-label="Abrir menú">
+    <button id="mobile-menu-toggle" class="md:hidden p-2 text-wine" aria-label="Abrir menú" aria-expanded="false">
       <span id="menu-icon" set:html={menuIcon} />
       <span id="x-icon" class="hidden" set:html={xIcon} />
     </button>
@@ -43,8 +41,8 @@ const xIcon = `
       <a href="#experiencias" class="hover:text-olive block p-2 rounded-md">Experiencias</a>
       <a href="#alojamiento" class="hover:text-olive block p-2 rounded-md">Alojamiento</a>
       <a href="#contacto" class="hover:text-olive block p-2 rounded-md">Contacto</a>
-      <button class="btn btn-primary text-sm w-full mt-2">Reservar</button>
-    </nav>
+      
+      </nav>
   </div>
 </header>
 
@@ -57,20 +55,16 @@ const xIcon = `
 
     if (toggleButton && mobileMenu && menuIcon && xIcon) {
       toggleButton.addEventListener('click', () => {
-        // Alterna la visibilidad del menú
         mobileMenu.classList.toggle('hidden');
-        
-        // Alterna los iconos
         menuIcon.classList.toggle('hidden');
         xIcon.classList.toggle('hidden');
         
-        // Actualiza el aria-label para accesibilidad
         const isExpanded = !mobileMenu.classList.contains('hidden');
         toggleButton.setAttribute('aria-expanded', String(isExpanded));
         toggleButton.setAttribute('aria-label', isExpanded ? 'Cerrar menú' : 'Abrir menú');
       });
 
-      // Opcional: Cierra el menú al hacer clic en un enlace
+      // Cierra el menú al hacer clic en un enlace
       mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
