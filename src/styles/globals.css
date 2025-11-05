@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====== variables que ya tenías ====== */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --wine: #5e0b15;
+  --olive: #a3b18a;
+  --sand: #f4ede4;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+}
+
+/* ====== clases que tu CSS usa pero Tailwind no trae ====== */
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+  .bg-wine {
+    background-color: var(--wine);
+  }
+  .text-wine {
+    color: var(--wine);
+  }
+  .bg-sand {
+    background-color: var(--sand);
+  }
+  /* la que te rompía antes */
+  .outline-ring\/50 {
+    outline-color: var(--ring);
+  }
+}
+
+/* ====== base ====== */
+@layer base {
+  * {
+    /* usamos las que acabamos de crear */
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ====== resto de tus estilos ====== */
+* {
+  @apply transition-all duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl;
+}
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+h3 {
+  @apply text-xl md:text-2xl;
+}
+
+.btn {
+  @apply px-6 py-3 rounded-lg font-semibold inline-block;
+}
+
+.btn-primary {
+  @apply bg-wine text-white hover:bg-red-900;
+}
+
+.btn-secondary {
+  @apply bg-sand text-wine border-2 border-wine hover:bg-wine hover:text-white;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4 md:px-6;
+}

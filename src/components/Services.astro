@@ -1,0 +1,26 @@
+---
+const services = [
+  { icon: '🏨', title: 'Hospedajes Seleccionados', desc: 'Alojamientos en ubicaciones estratégicas' },
+  { icon: '🚗', title: 'Traslados Confiables', desc: 'Vehículos autorizados y profesionales' },
+  { icon: '⛰️', title: 'Experiencias Auténticas', desc: 'Aventuras que crean felicidad' }
+];
+---
+
+<section id="servicios" class="py-20 bg-sand/20">
+  <div class="container">
+    <h2 class="text-center text-wine mb-16">Nuestros Servicios Integrales</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {services.map(svc => (
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl">
+          <div class="text-5xl mb-4">{svc.icon}</div>
+          <h3 class="text-wine mb-3">{svc.title}</h3>
+          <p class="text-gray-600 text-sm">{svc.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .wine { color: var(--wine); }
+</style>
