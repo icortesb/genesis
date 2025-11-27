@@ -4,16 +4,19 @@ import { Image } from 'astro:assets';
 import heroImage from '../../public/opening.jpg';
 ---
 
-<section class="py-20 md:py-32 bg-gradient-to-br from-wine/10 to-olive/10">
+<section class="py-20 md:py-32 bg-gray-50">
   <div class="container grid md:grid-cols-2 gap-8 items-center min-h-screen">
     <div>
-      <h1 class="text-wine mb-6 leading-tight">Descubrí Mendoza a tu manera</h1>
+      <h1 class="text-brand-orange mb-4 leading-tight">Vivencia Mendoza a tu manera</h1>
+      <h2 class="text-2xl font-semibold text-secondary mb-6">
+        Cada Vivencia es una creación única
+      </h2>
       <p class="text-lg text-gray-600 mb-8 leading-relaxed">
         Hospedajes únicos, traslados cómodos y experiencias inolvidables.
       </p>
       <div class="flex gap-4 flex-wrap">
-        <a href="#experiencias" class="btn btn-primary">Explorar experiencias</a>
-        <a href="#contacto" class="btn btn-secondary">Reservar ahora</a>
+        <a href="#experiencias" class="btn btn-primary bg-brand-orange text-white hover:bg-brand-orange/90">Explorar experiencias</a>
+        <a href="#contacto" class="btn btn-primary bg-brand-orange text-white hover:bg-brand-orange/90">Reservar ahora</a>
       </div>
     </div>
     
@@ -29,8 +32,3 @@ import heroImage from '../../public/opening.jpg';
     </div>
   </div>
 </section>
-
-<style>
-  .wine { color: var(--wine); }
-  .olive { color: var(--olive); }
-</style>

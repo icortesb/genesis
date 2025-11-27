@@ -1,11 +1,14 @@
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "*.{js,ts,jsx,tsx,mdx}"],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       colors: {
-        wine: '#5E0B15',
-        olive: '#A3B18A',
-        sand: '#F4EDE4',
+        // Paleta de colores definitiva
+        'brand-orange': '#FF9F19',
+        'brand-olive': '#535205',
+        'brand-brown': '#5F330A',
+        'brand-gold': '#96803A',
       },
     },
   },

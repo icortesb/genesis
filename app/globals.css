@@ -1,85 +1,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
+/* ====== NUEVA PALETA DE COLORES ====== */
 :root {
-  /* Updated color palette for GENESIS - Mendoza tourism company */
-  --background: #f4ede4;
-  --foreground: #2a2a2a;
-  --card: #ffffff;
-  --card-foreground: #2a2a2a;
-  --popover: #ffffff;
-  --popover-foreground: #2a2a2a;
-  --primary: #5e0b15;
-  --primary-foreground: #ffffff;
-  --secondary: #a3b18a;
-  --secondary-foreground: #2a2a2a;
-  --muted: #d4c5b9;
-  --muted-foreground: #5a5a5a;
-  --accent: #8b6f47;
-  --accent-foreground: #ffffff;
-  --destructive: #c1372f;
-  --destructive-foreground: #ffffff;
-  --border: #d4c5b9;
-  --input: #ffffff;
-  --ring: #a3b18a;
-  --chart-1: #5e0b15;
-  --chart-2: #a3b18a;
-  --chart-3: #8b6f47;
-  --chart-4: #d4c5b9;
-  --chart-5: #c1372f;
+  --primary: #535205;
+  --accent: #ff9f19;
+  --dark: #5f330a;
+  --secondary: #96803a;
+
+  --sand: #f4ede4;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  --primary-btn: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary-btn: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #2a2a2a;
-  --sidebar-primary: #5e0b15;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #a3b18a;
-  --sidebar-accent-foreground: #2a2a2a;
-  --sidebar-border: #d4c5b9;
-  --sidebar-ring: #a3b18a;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  --background: #1a1a1a;
-  --foreground: #f4ede4;
-  --card: #2a2a2a;
-  --card-foreground: #f4ede4;
-  --popover: #2a2a2a;
-  --popover-foreground: #f4ede4;
-  --primary: #d4a574;
-  --primary-foreground: #1a1a1a;
-  --secondary: #a3b18a;
-  --secondary-foreground: #1a1a1a;
-  --muted: #404040;
-  --muted-foreground: #a0a0a0;
-  --accent: #c9a87c;
-  --accent-foreground: #1a1a1a;
-  --destructive: #ff6b6b;
-  --destructive-foreground: #1a1a1a;
-  --border: #404040;
-  --input: #2a2a2a;
-  --ring: #a3b18a;
-  --chart-1: #d4a574;
-  --chart-2: #a3b18a;
-  --chart-3: #c9a87c;
-  --chart-4: #404040;
-  --chart-5: #ff6b6b;
-  --sidebar: #1a1a1a;
-  --sidebar-foreground: #f4ede4;
-  --sidebar-primary: #d4a574;
-  --sidebar-primary-foreground: #1a1a1a;
-  --sidebar-accent: #a3b18a;
-  --sidebar-accent-foreground: #1a1a1a;
-  --sidebar-border: #404040;
-  --sidebar-ring: #a3b18a;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
-  --font-sans: "Poppins", "Poppins Fallback";
-  --font-serif: "Playfair Display", serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -118,7 +129,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* 👇 agregado para Tailwind 3 */
+/* Agregar clase border-wine que faltaba + actualizar todas las clases con nueva paleta */
 @layer utilities {
   .bg-background {
     background-color: var(--background);
@@ -129,13 +140,94 @@
   .border-border {
     border-color: var(--border);
   }
+  .border-wine {
+    border-color: var(--primary);
+  }
+  .bg-wine {
+    background-color: var(--primary);
+  }
+  .text-wine {
+    color: var(--primary);
+  }
+  .bg-sand {
+    background-color: var(--sand);
+  }
+  .outline-ring\/50 {
+    outline-color: var(--ring);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+  .bg-dark {
+    background-color: var(--dark);
+  }
+  .text-dark {
+    color: var(--dark);
+  }
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  .text-secondary {
+    color: var(--secondary);
+  }
 }
 
+/* ====== resto de tus estilos ====== */
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring\/50 transition-all duration-300;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
   }
+}
+
+
+
+
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+h2 {
+  font-family: var(--font-open-sans);
+  @apply text-3xl md:text-4xl font-bold;
+}
+
+h1 {
+  font-family: var(--font-oswald);
+  @apply text-4xl md:text-5xl uppercase;
+}
+h3 {
+  @apply text-xl md:text-2xl;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold inline-block;
+  }
+
+  .btn-primary {
+    @apply bg-wine text-white hover:bg-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-sand text-wine border-2 border-wine hover:bg-wine hover:text-white;
+  }
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4 md:px-6;
 }

@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import XIcon from './icons/XIcon.astro';
 
 // Importamos las imágenes
 import imgParapente from '../../public/parapente.png';
@@ -11,17 +12,16 @@ const experiences = [
   { 
     title: 'Parapente en Tándem', 
     desc: 'Vuelo sobre los Andes con fotos HD, vino y certificado', 
-    price: 'desde $120.000',
     image: imgParapente,
     alt: 'Dos personas volando en parapente tándem sobre las montañas de Mendoza',
     // --- NUEVOS DATOS ---
     details: {
       main: 'Vuelo inolvidable sobre el pedemonte mendocino con vistas espectaculares de la Cordillera de los Andes.',
       options: [
-        '📍 Despegue: Cerro Arco (subida en 4x4)',
-        '✈️ Vuelo Clásico: 15-20 min. - $120.000',
-        '✈️ Vuelo Extendido: 40-45 min. - $180.000',
-        '⛰️ Hike and Fly: $190.000'
+        '📍 Despegue: Cerro Arco (incluye subida en 4x4)',
+        '✈️ Vuelo Clásico: 15-20 min.',
+        '✈️ Vuelo Extendido: 40-45 min.',
+        '⛰️ Hike and Fly'
       ],
       includes: [
         'Pilotos certificados (+15 años de exp.)',
@@ -36,15 +36,14 @@ const experiences = [
   { 
     title: 'Rafting Río Mendoza', 
     desc: 'Descenso clase II-III con guía profesional y equipo', 
-    price: '$54.000',
     image: imgRafting,
     alt: 'Grupos de personas haciendo rafting en los rápidos del Río Mendoza',
     // --- NUEVOS DATOS ---
     details: {
       main: 'Descenso deportivo en el Río Mendoza. Dificultad Clase II-III+ (Media/Alta, máxima en verano).',
       options: [
-        '⏱️ Duración: 2 horas total (1 hora navegación)',
-        '💧 Tarifa: $54.000 por persona'
+        '⏱️ Duración total: 2 horas',
+        '⏱️ Tiempo de navegación: 1 hora'
       ],
       includes: [
         'Equipo completo (traje, chaqueta, calzado neoprene, casco, chaleco)',
@@ -59,15 +58,14 @@ const experiences = [
   { 
     title: 'Kayak Dique Potrerillos', 
     desc: 'Actividad placentera en aguas tranquilas con guía', 
-    price: '$54.000',
     image: imgKayak,
     alt: 'Dos personas en un kayak en un lago con montañas al fondo',
     // --- NUEVOS DATOS ---
     details: {
       main: 'Actividad acuática placentera en el lago. Experiencia relajante rodeada de montañas.',
       options: [
-        '⏱️ Duración: 2 horas',
-        '🚣 Tarifa: $54.000 por persona'
+        '⏱️ Duración de la actividad: 2 horas',
+        '🚣 Ideal para familias y grupos'
       ],
       includes: [
         'Equipo completo',
@@ -80,23 +78,16 @@ const experiences = [
   }
 ];
 
-// Icono 'X' para el botón de cerrar
-const xIcon = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-  <line x1="18" y1="6" x2="6" y2="18"></line>
-  <line x1="6" y1="6" x2="18" y2="18"></line>
-</svg>
-`;
 ---
 
 <section id="experiencias" class="py-20">
   <div class="container">
-    <h2 class="text-center text-wine mb-16">Experiencias Destacadas</h2>
+    <h2 class="text-center text-brand-orange mb-16">Experiencias Destacadas</h2>
     <div class="grid md:grid-cols-3 gap-8">
       
       {experiences.map((exp, index) => (
         <button 
-          class="experience-card bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden text-left transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-olive/50"
+          class="experience-card bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden text-left transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-brand-olive/50"
           data-index={index}
           aria-label={`Ver detalles de ${exp.title}`}
         >
@@ -109,9 +100,8 @@ const xIcon = `
             loading="lazy"
           />
           <div class="p-6">
-            <h3 class="text-wine mb-2 text-lg">{exp.title}</h3>
+            <h3 class="text-brand-orange mb-2 text-lg">{exp.title}</h3>
             <p class="text-gray-600 text-sm mb-4">{exp.desc}</p>
-            <p class="text-olive font-bold">{exp.price}</p>
           </div>
         </button>
       ))}
@@ -134,12 +124,12 @@ const xIcon = `
         height="256"
       />
       <button id="modal-close-btn" class="absolute top-4 right-4 bg-white/70 rounded-full p-2 text-gray-800 hover:bg-white transition-all" aria-label="Cerrar">
-        <Fragment set:html={xIcon} />
+        <XIcon class="h-6 w-6" />
       </button>
     </div>
 
     <div class="p-6 md:p-8 overflow-y-auto">
-      <h2 id="modal-title" class="text-wine text-3xl font-bold mb-4"></h2>
+      <h2 id="modal-title" class="text-brand-orange text-3xl font-bold mb-4"></h2>
       <p id="modal-main-desc" class="text-gray-600 mb-6 text-lg"></p>
       
       <div class="grid md:grid-cols-2 gap-6">
@@ -157,11 +147,11 @@ const xIcon = `
       </div>
 
       <p id="modal-note" class="text-sm text-gray-500 italic mt-6"></p>
-      <p id="modal-quote" class="text-base text-olive italic mt-6 font-semibold text-center border-t border-b border-gray-200 py-4"></p>
+      <p id="modal-quote" class="text-base text-brand-olive italic mt-6 font-semibold text-center border-t border-b border-gray-200 py-4"></p>
     </div>
 
     <div class="p-6 border-t border-gray-200 mt-auto bg-gray-50 rounded-b-2xl">
-      <a href="#contacto" id="modal-contact-btn" class="btn btn-primary w-full text-center">
+      <a href="#contacto" id="modal-contact-btn" class="btn btn-primary bg-brand-orange text-white hover:bg-brand-orange/90 w-full text-center">
         Reservar esta experiencia
       </a>
     </div>
@@ -269,12 +259,3 @@ const xIcon = `
   });
 
 </script>
-
-<style>
-  .wine { color: var(--wine); }
-  .olive { color: var(--olive); }
-  /* Añadimos cursor pointer a las cards */
-  .experience-card {
-    cursor: pointer;
-  }
-</style>

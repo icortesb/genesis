@@ -14,7 +14,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-primary">GENESIS</h1>
+              <h1 className="text-2xl font-bold text-primary">Vivenciando Mendoza</h1>
               <p className="text-xs text-secondary font-medium">Creadores de Felicidad</p>
             </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
       {/* Title Section */}
       <section className="py-16 text-center bg-background">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">Descubrí Mendoza a tu manera</h2>
+          <h2 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">Vivencia Mendoza a tu manera</h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Hospedajes únicos, traslados cómodos y experiencias inolvidables en el corazón de los Andes
           </p>
@@ -368,7 +368,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Brand */}
             <div>
-              <h5 className="text-2xl font-bold mb-2">GENESIS</h5>
+              <h5 className="text-2xl font-bold mb-2">Vivenciando Mendoza</h5>
               <p className="text-sm text-primary-foreground/80 mb-2">Creadores de Felicidad</p>
               <p className="text-sm text-primary-foreground/70">
                 Experiencias turísticas personalizadas en Mendoza • Más de 10 años de experiencia
@@ -387,7 +387,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-primary-foreground/20 pt-8 text-sm text-primary-foreground/80 text-center">
-            <p>© 2025 GENESIS - Creadores de Felicidad. Todos los derechos reservados.</p>
+            <p>© 2025 Vivenciando Mendoza - Creadores de Felicidad. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>

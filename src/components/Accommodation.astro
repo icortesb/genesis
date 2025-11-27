@@ -4,9 +4,9 @@ import { Image } from 'astro:assets';
 import imgCasaLujan from '../../public/casalujancuyo.png';
 ---
 
-<section id="alojamiento" class="py-20 bg-sand/10">
+<section id="alojamiento" class="py-20 bg-gray-50">
   <div class="container">
-    <h2 class="text-center text-wine mb-16">Alojamiento Destacado</h2>
+    <h2 class="text-center text-brand-orange mb-16">Alojamiento Destacado</h2>
     <div class="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-2xl shadow-lg">
       
       <div class="rounded-xl aspect-square overflow-hidden">
@@ -21,7 +21,7 @@ import imgCasaLujan from '../../public/casalujancuyo.png';
       </div>
 
       <div class="flex flex-col justify-center">
-        <h3 class="text-wine mb-4 text-2xl">Casa Luján de Cuyo</h3>
+        <h3 class="text-brand-orange mb-4 text-2xl">Casa Luján de Cuyo</h3>
         <p class="text-gray-600 mb-6">En Mayor Drummond, barrio tranquilo. Perfecta para grupos de hasta 7 personas.</p>
         <ul class="space-y-2 text-sm text-gray-600 mb-8">
           <li>✓ 3 habitaciones (2 dobles, 3 simples) y 2 baños</li>
@@ -29,12 +29,8 @@ import imgCasaLujan from '../../public/casalujancuyo.png';
           <li>✓ Jardín con pileta y quincho con churrasquera</li>
           <li>✓ Wi-Fi, estacionamiento y vigilancia 24hs</li>
         </ul>
-         <a href="#contacto" class="btn btn-primary w-fit">Ver más alojamientos</a>
+         <a href="#contacto" class="btn btn-primary bg-brand-orange text-white hover:bg-brand-orange/90 w-fit">Ver más alojamientos</a>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .wine { color: var(--wine); }
-</style>

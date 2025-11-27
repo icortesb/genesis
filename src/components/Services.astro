@@ -1,4 +1,6 @@
 ---
+import XIcon from './icons/XIcon.astro';
+
 // 1. AÑADÍ DESCRIPCIONES COMPLETAS (basadas en app/page.tsx)
 const services = [
   { 
@@ -21,28 +23,21 @@ const services = [
   }
 ];
 
-// Icono 'X' para el botón de cerrar
-const xIcon = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
-  <line x1="18" y1="6" x2="6" y2="18"></line>
-  <line x1="6" y1="6" x2="18" y2="18"></line>
-</svg>
-`;
 ---
 
-<section id="servicios" class="py-20 bg-sand/20">
+<section id="servicios" class="py-20 bg-gray-50">
   <div class="container">
-    <h2 class="text-center text-wine mb-16">Nuestros Servicios Integrales</h2>
+    <h2 class="text-center text-brand-orange mb-16">Nuestros Servicios Integrales</h2>
     <div class="grid md:grid-cols-3 gap-8">
       
       {services.map((svc, index) => (
         <button 
-          class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl text-left transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-olive/50"
+          class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl text-left transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-brand-olive/50"
           data-index={index}
           aria-label={`Ver detalles de ${svc.title}`}
         >
           <div class="text-5xl mb-4">{svc.icon}</div>
-          <h3 class="text-wine mb-3">{svc.title}</h3>
+          <h3 class="text-brand-orange mb-3">{svc.title}</h3>
           <p class="text-gray-600 text-sm">{svc.desc}</p>
         </button>
       ))}
@@ -56,9 +51,9 @@ const xIcon = `
   <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[90vh] flex flex-col">
     
     <div class="flex justify-between items-center p-6 border-b">
-      <h2 id="service-modal-title" class="text-wine text-2xl font-bold"></h2>
+      <h2 id="service-modal-title" class="text-brand-orange text-2xl font-bold"></h2>
       <button id="service-modal-close-btn" class="text-gray-500 hover:text-gray-800 transition-colors" aria-label="Cerrar">
-        <Fragment set:html={xIcon} />
+        <XIcon class="h-6 w-6" />
       </button>
     </div>
 
@@ -68,7 +63,7 @@ const xIcon = `
     </div>
 
     <div class="p-6 border-t border-gray-200 mt-auto bg-gray-50 rounded-b-2xl">
-      <a href="#contacto" id="service-modal-contact-btn" class="btn btn-primary w-full text-center">
+      <a href="#contacto" id="service-modal-contact-btn" class="btn btn-primary bg-brand-orange text-white hover:bg-brand-orange/90 w-full text-center">
         Consultar por este servicio
       </a>
     </div>
@@ -136,12 +131,3 @@ const xIcon = `
     }
   });
 </script>
-
-<style>
-  .wine { color: var(--wine); }
-  
-  /* Añadimos cursor pointer a las nuevas cards */
-  .service-card {
-    cursor: pointer;
-  }
-</style>

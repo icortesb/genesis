@@ -1,23 +1,29 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Poppins, Playfair_Display } from "next/font/google"
+import { Poppins, Oswald, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins", // Variable para el cuerpo del texto
 })
 
-const playfair = Playfair_Display({
+const oswald = Oswald({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  variable: "--font-oswald", // Variable para títulos principales
+})
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans", // Variable para títulos secundarios
 })
 
 export const metadata: Metadata = {
-  title: "GENESIS - Creadores de Felicidad | Mendoza Tourism",
+  title: "Vivenciando Mendoza",
   description:
-    "Descubrí Mendoza a tu manera. Experiencias únicas, hospedajes seleccionados y traslados confiables en la provincia de Mendoza, Argentina.",
+    "Vivencia Mendoza a tu manera. Experiencias únicas, hospedajes seleccionados y traslados confiables en la provincia de Mendoza, Argentina.",
   generator: "v0.app",
 }
 
@@ -28,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${poppins.className} antialiased`}>
+      <body
+        className={`${poppins.variable} ${oswald.variable} ${openSans.variable} font-sans antialiased`}
+      >
         {children}
         <Analytics />
       </body>
