@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Menu, X, MapPin, Compass, Mountain, MapPinIcon, ArrowRight } from "lucide-react"
 import { useState } from "react"
 
@@ -16,6 +17,7 @@ export default function Home() {
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-bold text-primary">Vivenciando Mendoza</h1>
               <p className="text-xs text-secondary font-medium">Creadores de Felicidad</p>
+              <div className="flex items-center gap-3"></div>
             </div>
 
             {/* Desktop Navigation */}

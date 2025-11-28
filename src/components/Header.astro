@@ -1,11 +1,17 @@
 ---
+import { Image } from 'astro:assets';
 import MenuIcon from './icons/MenuIcon.astro';
 import XIcon from './icons/XIcon.astro';
 ---
 
 <header class="sticky top-0 z-50 bg-white shadow-md">
   <div class="container flex items-center justify-between py-4">
-    <div class="text-2xl font-bold text-brand-orange">Vivenciando Mendoza</div>
+    <a href="/" class="flex items-center gap-3">
+      <Image src="/icono.png" alt="Vivenciando Mendoza logo" width={40} height={40} />
+      <div>
+        <div class="text-2xl font-bold text-brand-orange">Vivenciando Mendoza</div>
+      </div>
+    </a>
 
     <nav class="hidden md:flex gap-8 items-center text-sm">
       <a href="#servicios" class="hover:text-brand-olive">Servicios</a>
