@@ -71,7 +71,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">Vivencia Mendoza a tu manera</h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Hospedajes únicos, traslados cómodos y experiencias inolvidables en el corazón de los Andes
+            Hospedajes, traslados cómodos y experiencias inolvidables en el corazón de los Andes
           </p>
         </div>
       </section>
@@ -149,8 +149,8 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">Aventuras inolvidables en el corazón de los Andes</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Parapente */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Parapente (Existing) */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="relative h-48 overflow-hidden bg-gray-200"></div>
               <div className="p-6">
@@ -175,7 +175,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Rafting */}
+            {/* Rafting (Existing) */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="relative h-48 overflow-hidden bg-gray-200"></div>
               <div className="p-6">
@@ -200,7 +200,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Kayak */}
+            {/* Kayak (Existing) */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="relative h-48 overflow-hidden bg-gray-200"></div>
               <div className="p-6">
@@ -223,6 +223,108 @@ export default function Home() {
                 <p className="text-xs text-accent italic">Ideal para familias y grupos</p>
               </div>
             </div>
+
+            {/* Aventura y Adrenalina */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+              <div className="relative h-48 overflow-hidden bg-gray-200"></div>
+              <div className="p-6">
+                <h4 className="text-2xl font-bold text-primary mb-3">Aventura y Adrenalina</h4>
+                <p className="text-muted-foreground mb-4">
+                  Experiencias para quienes buscan emociones fuertes y una dosis extra de adrenalina.
+                </p>
+                <div className="mb-4 text-xs text-muted-foreground">
+                  <p className="font-semibold mb-2">Incluye:</p>
+                  <ul className="space-y-1">
+                    <li>• Canopy: Circuitos de tirolesas sobre montañas y ríos.</li>
+                    <li>• Paracaidismo: Salto en tándem con vistas espectaculares.</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-accent italic">Ideales para vivir la montaña desde otra perspectiva.</p>
+              </div>
+            </div>
+
+            {/* Trekking en la Cordillera */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+              <div className="relative h-48 overflow-hidden bg-gray-200"></div>
+              <div className="p-6">
+                <h4 className="text-2xl font-bold text-primary mb-3">Trekking en la Cordillera</h4>
+                <p className="text-muted-foreground mb-4">
+                  Descubrí la magia de la montaña mendocina a través de caminatas guiadas.
+                </p>
+                <div className="mb-4 text-xs text-muted-foreground">
+                  <p className="font-semibold mb-2">Lugares donde se realiza:</p>
+                  <ul className="space-y-1">
+                    <li>• Potrerillos: Vistas al Dique y Cordón del Plata.</li>
+                    <li>• Uspallata: Cerros multicolores y cascadas.</li>
+                    <li>• Precordillera: Naturaleza y patrimonio histórico.</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-accent italic">
+                  Una experiencia ideal para quienes desean explorar la cordillera de una manera activa y segura.
+                </p>
+              </div>
+            </div>
+
+            {/* Cabalgatas en Mendoza */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+              <div className="relative h-48 overflow-hidden bg-gray-200"></div>
+              <div className="p-6">
+                <h4 className="text-2xl font-bold text-primary mb-3">Cabalgatas en Mendoza</h4>
+                <p className="text-muted-foreground mb-4">
+                  Viví una experiencia auténtica recorriendo paisajes mendocinos a caballo.
+                </p>
+                <div className="mb-4 text-xs text-muted-foreground">
+                  <p className="font-semibold mb-2">Lugares donde se realiza:</p>
+                  <ul className="space-y-1">
+                    <li>• Luján de Cuyo: Cabalgatas criollas.</li>
+                    <li>• Zonas rurales de montaña: Experiencias camperas.</li>
+                    <li>• Cabalgatas al atardecer: Recorridos especiales.</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-accent italic">
+                  Una forma tradicional y relajada de disfrutar la naturaleza.
+                </p>
+              </div>
+            </div>
+
+            {/* Experiencias Acuáticas */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+              <div className="relative h-48 overflow-hidden bg-gray-200"></div>
+              <div className="p-6">
+                <h4 className="text-2xl font-bold text-primary mb-3">Experiencias Acuáticas</h4>
+                <p className="text-muted-foreground mb-4">
+                  Disfruta del agua y los paisajes de montaña de una forma relajada y divertida.
+                </p>
+                <div className="mb-4 text-xs text-muted-foreground">
+                  <p className="font-semibold mb-2">Incluye:</p>
+                  <ul className="space-y-1">
+                    <li>• Stand Up Paddle: Navegación en el Dique Potrerillos.</li>
+                    <li>• Paseo en Velero: Navegación relajada con vistas panorámicas.</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-accent italic">Actividades guiadas para todas las edades.</p>
+              </div>
+            </div>
+
+            {/* Experiencias Panorámicas y Exclusivas */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group">
+              <div className="relative h-48 overflow-hidden bg-gray-200"></div>
+              <div className="p-6">
+                <h4 className="text-2xl font-bold text-primary mb-3">Experiencias Panorámicas y Exclusivas</h4>
+                <p className="text-muted-foreground mb-4">
+                  Disfruta Mendoza desde una perspectiva diferente, con paisajes únicos y momentos especiales.
+                </p>
+                <div className="mb-4 text-xs text-muted-foreground">
+                  <p className="font-semibold mb-2">Incluye:</p>
+                  <ul className="space-y-1">
+                    <li>• Vuelo en Helicóptero: Sobrevuelo del Dique Potrerillos.</li>
+                    <li>• Experiencia Aconcagua: Excursión al corazón de los Andes.</li>
+                  </ul>
+                </div>
+                <p className="text-xs text-accent italic">Ideales para celebraciones o viajes en pareja.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -342,10 +444,18 @@ export default function Home() {
             <div className="mb-6">
               <select className="w-full px-4 py-3 bg-background rounded-lg border border-muted focus:outline-none focus:ring-2 focus:ring-primary">
                 <option>Selecciona una experiencia</option>
-                <option>Parapente</option>
-                <option>Rafting</option>
-                <option>Kayak</option>
-                <option>Consulta General</option>
+                <option>Parapente en Tándem</option>
+                <option>Rafting Río Mendoza</option>
+                <option>Kayak Dique Potrerillos</option>
+                <option>Aventura y Adrenalina (Canopy, Paracaidismo)</option>
+                <option>Trekking en la Cordillera</option>
+                <option>Cabalgatas en Mendoza</option>
+                <option>Experiencias Acuáticas (Stand Up Paddle, Velero)</option>
+                <option>Experiencias Panorámicas y Exclusivas (Helicóptero, Aconcagua)</option>
+                <option>---</option>
+                <option>Hospedajes</option>
+                <option>Traslados</option>
+                <option>Consulta General / Otro</option>
               </select>
             </div>
 

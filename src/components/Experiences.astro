@@ -3,18 +3,23 @@ import { Image } from 'astro:assets';
 import XIcon from './icons/XIcon.astro';
 
 // Importamos las imágenes
-import imgParapente from '../../public/parapente.png';
+import imgParapente from '../../public/parapente.jpg';
 import imgRafting from '../../public/rafting.png';
 import imgKayak from '../../public/kayak.png';
+// NOTA: Agrega una imagen para el tour de bodegas en `public/` y actualiza la siguiente línea.
+// Por ahora, usamos la imagen de parapente como placeholder.
+import imgBodega from '../../public/paracaidismo.jpg';
+import imgTrekking from '../../public/trekking.png'; //
+import imgCabalgata from '../../public/cabalgata.png'; //
+import imgAcuaticas from '../../public/standuppaddle.png'; // Placeholder, usa una imagen apropiada
+import imgPanoramicas from '../../public/experiencia-acon.png'; // Placeholder, usa una imagen apropiada
 
-// 1. AÑADÍ DATOS DETALLADOS PARA EL MODAL
 const experiences = [
   { 
     title: 'Parapente en Tándem', 
     desc: 'Vuelo sobre los Andes con fotos HD, vino y certificado', 
     image: imgParapente,
     alt: 'Dos personas volando en parapente tándem sobre las montañas de Mendoza',
-    // --- NUEVOS DATOS ---
     details: {
       main: 'Vuelo inolvidable sobre el pedemonte mendocino con vistas espectaculares de la Cordillera de los Andes.',
       options: [
@@ -38,7 +43,6 @@ const experiences = [
     desc: 'Descenso clase II-III con guía profesional y equipo', 
     image: imgRafting,
     alt: 'Grupos de personas haciendo rafting en los rápidos del Río Mendoza',
-    // --- NUEVOS DATOS ---
     details: {
       main: 'Descenso deportivo en el Río Mendoza. Dificultad Clase II-III+ (Media/Alta, máxima en verano).',
       options: [
@@ -60,7 +64,6 @@ const experiences = [
     desc: 'Actividad placentera en aguas tranquilas con guía', 
     image: imgKayak,
     alt: 'Dos personas en un kayak en un lago con montañas al fondo',
-    // --- NUEVOS DATOS ---
     details: {
       main: 'Actividad acuática placentera en el lago. Experiencia relajante rodeada de montañas.',
       options: [
@@ -75,6 +78,109 @@ const experiences = [
       note: 'Ideal para familias y grupos',
       quote: ''
     }
+  },
+  { 
+    title: 'Aventura y Adrenalina', 
+    desc: 'Experiencias para quienes buscan emociones fuertes y una dosis extra de adrenalina.', 
+    image: imgBodega, // Placeholder, usa una imagen apropiada
+    alt: 'Persona haciendo canopy en la montaña',
+    details: {
+      main: 'Experiencias pensadas para quienes buscan emociones fuertes y una dosis extra de adrenalina en entornos naturales únicos de Mendoza. Actividades guiadas y seguras que combinan altura, velocidad y paisajes inolvidables.',
+      options: [
+        '🏞️ Canopy: Circuitos de tirolesas que atraviesan montañas y ríos, permitiendo volar sobre el paisaje mendocino.',
+        '🪂 Paracaidismo: Salto en tándem para experimentar la caída libre y el vuelo en paracaídas, con vistas espectaculares.'
+      ],
+      includes: [
+        'Guías profesionales y certificados',
+        'Equipamiento de seguridad completo',
+        'Registro audiovisual (en Paracaidismo)'
+      ],
+      note: 'Actividades sujetas a condiciones climáticas.',
+      quote: 'Ideales para vivir la montaña desde otra perspectiva.'
+    }
+  },
+  {
+    title: 'Trekking en la Cordillera',
+    desc: 'Caminatas guiadas por paisajes imponentes y senderos naturales únicos.',
+    image: imgTrekking, // Recuerda cambiar esta imagen
+    alt: 'Persona haciendo trekking en un sendero de montaña con un valle de fondo',
+    details: {
+      main: 'Descubrí la magia de la montaña mendocina a través de caminatas guiadas. Cada recorrido invita a conectar con la naturaleza, respirar aire puro y disfrutar de vistas inolvidables, combinando aventura, historia y geografía andina.',
+      options: [
+        '📍 Potrerillos: Senderos con vistas al Dique y al Cordón del Plata.',
+        '📍 Uspallata: Caminatas entre cerros multicolores y cascadas.',
+        '📍 Precordillera: Recorridos de naturaleza y patrimonio histórico.'
+      ],
+      includes: [
+        'Guía profesional de trekking',
+        'Seguro de accidentes personales',
+        'Botiquín de primeros auxilios'
+      ],
+      note: 'Se recomienda llevar calzado cómodo, protector solar y agua.',
+      quote: 'Una experiencia ideal para quienes desean explorar la cordillera de una manera activa y segura.'
+    }
+  }
+  ,
+  {
+    title: 'Cabalgatas en Mendoza',
+    desc: 'Una forma tradicional y relajada de disfrutar la naturaleza.',
+    image: imgCabalgata, // Recuerda cambiar esta imagen
+    alt: 'Grupo de personas a caballo en un paisaje de montaña',
+    details: {
+      main: 'Viví una experiencia auténtica recorriendo paisajes mendocinos a caballo. Las cabalgatas permiten conocer entornos rurales y de montaña, conectar con la cultura local y saborear la tranquilidad del campo.',
+      options: [
+        '📍 Luján de Cuyo: Cabalgatas criollas en un entorno natural privilegiado.',
+        '📍 Zonas rurales de montaña: Experiencias camperas que recrean la vida del gaucho.',
+        '📍 Cabalgatas al atardecer: Recorridos especiales para disfrutar los colores del sol sobre la cordillera.'
+      ],
+      includes: [
+        'Guía especializado',
+        'Caballos mansos y equipados',
+        'Seguro de accidentes personales'
+      ],
+      note: 'Propuestas pensadas para disfrutar en pareja, en familia o con amigos.',
+      quote: 'Una forma tradicional y relajada de disfrutar la naturaleza.'
+    }
+  },
+  {
+    title: 'Experiencias Acuáticas',
+    desc: 'Disfruta del agua y los paisajes de montaña de una forma relajada y divertida.',
+    image: imgAcuaticas, // Recuerda cambiar esta imagen
+    alt: 'Persona haciendo Stand Up Paddle en un lago con montañas',
+    details: {
+      main: 'Propuestas ideales para disfrutar del agua y los paisajes de montaña de una forma relajada y divertida. Actividades guiadas pensadas para todas las edades, en entornos naturales de gran belleza.',
+      options: [
+        '🏄 Stand Up Paddle: Navegación sobre aguas tranquilas en el Dique Potrerillos, rodeado de montañas.',
+        '⛵ Paseo en Velero: Experiencia de navegación relajada para disfrutar del embalse y sus vistas panorámicas.'
+      ],
+      includes: [
+        'Guía profesional',
+        'Equipamiento completo',
+        'Seguro de accidentes personales'
+      ],
+      note: 'Actividades ideales para familias y grupos.',
+      quote: 'Una forma diferente de conectar con el agua y la montaña.'
+    }
+  },
+  {
+    title: 'Experiencias Panorámicas y Exclusivas',
+    desc: 'Vivencias para disfrutar Mendoza desde una perspectiva diferente, combinando paisajes únicos y comodidad.',
+    image: imgPanoramicas, // Recuerda cambiar esta imagen
+    alt: 'Vista panorámica de la cordillera de los Andes desde un helicóptero',
+    details: {
+      main: 'Vivencias pensadas para quienes buscan disfrutar Mendoza desde una perspectiva diferente, combinando paisajes únicos, comodidad y momentos especiales. Ideales para celebraciones, viajes en pareja o experiencias premium.',
+      options: [
+        '🚁 Vuelo en Helicóptero: Sobrevuelo panorámico del Dique Potrerillos y la cordillera.',
+        '🏔️ Experiencia Aconcagua: Excursión completa al corazón de los Andes, visitando paisajes icónicos y puntos emblemáticos.'
+      ],
+      includes: [
+        'Guía especializado',
+        'Transporte premium',
+        'Servicio exclusivo y personalizado'
+      ],
+      note: 'Ideales para celebraciones, viajes en pareja o experiencias premium.',
+      quote: 'Una perspectiva única de los paisajes más imponentes de Mendoza.'
+    }
   }
 ];
 
@@ -83,7 +189,7 @@ const experiences = [
 <section id="experiencias" class="py-20">
   <div class="container">
     <h2 class="text-center text-brand-orange mb-16">Experiencias Destacadas</h2>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       
       {experiences.map((exp, index) => (
         <button 
@@ -134,7 +240,7 @@ const experiences = [
       
       <div class="grid md:grid-cols-2 gap-6">
         <div>
-          <h4 class="font-bold text-gray-800 mb-3">Opciones y Precios</h4>
+          <h4 class="font-bold text-gray-800 mb-3">Opciones y Tiempos</h4>
           <ul id="modal-options" class="space-y-2 text-sm text-gray-600">
             </ul>
         </div>
@@ -160,7 +266,7 @@ const experiences = [
 
 
 <script define:vars={{ experiencesData: experiences }}>
-  // Pasamos los datos de Astro al script del cliente
+  // Pasamos los datos de Astro al cliente
   const experiences = experiencesData;
 
   // --- Elementos del DOM ---
@@ -185,7 +291,6 @@ const experiences = [
 
     // 1. Rellenar contenido
     modalTitle.textContent = exp.title;
-    // La ruta de la imagen ya está procesada por Astro
     modalImage.src = exp.image.src; 
     modalImage.alt = exp.alt;
     modalMainDesc.textContent = exp.details.main;
@@ -240,7 +345,7 @@ const experiences = [
   experienceCards.forEach(card => {
     card.addEventListener('click', () => {
       const index = card.getAttribute('data-index');
-      openModal(index);
+      openModal(parseInt(index, 10));
     });
   });
 
