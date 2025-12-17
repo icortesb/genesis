@@ -8,16 +8,39 @@ import imgRafting from '../../public/rafting.png';
 import imgKayak from '../../public/kayak.png';
 // NOTA: Agrega una imagen para el tour de bodegas en `public/` y actualiza la siguiente línea.
 // Por ahora, usamos la imagen de parapente como placeholder.
-import imgBodega from '../../public/paracaidismo.jpg';
+import imgBodega from '../../public/bodega.jpg';
 import imgTrekking from '../../public/trekking.png'; //
 import imgCabalgata from '../../public/cabalgata.png'; //
-import imgAcuaticas from '../../public/standuppaddle.png'; // Placeholder, usa una imagen apropiada
+import imgAcuaticas from '../../public/standuppaddle.png'; //
 import imgPanoramicas from '../../public/experiencia-acon.png'; // Placeholder, usa una imagen apropiada
 
 const experiences = [
+  {
+    title: 'Experiencia Enológica en Mendoza',
+    desc: 'Viví Mendoza a través de sus vinos, gastronomía y paisajes únicos.',
+    image: imgBodega, // Placeholder, actualiza con una imagen de bodegas.
+    alt: 'Copa de vino con viñedos y montañas de fondo en Mendoza',
+    details: {
+      main: 'Una experiencia enológica integral que te invita a recorrer las principales regiones vitivinícolas, visitando bodegas seleccionadas, degustando vinos de alta calidad y disfrutando de almuerzos maridados al pie de la Cordillera de los Andes.',
+      options: [
+        '🍇 Regiones: Luján de Cuyo, Maipú y Valle de Uco.',
+        '🍷 Visitas y degustaciones guiadas en bodegas con identidad propia.',
+        '🍽️ Almuerzos maridados de varios pasos en restaurantes de bodega.',
+        '🫒 Visitas opcionales a olivícolas y destilerías artesanales.'
+      ],
+      includes: [
+        'Recorridos por las principales zonas vitivinícolas.',
+        'Degustaciones de vinos de alta calidad.',
+        'Almuerzos en bodega con maridaje.',
+        'Guías especializados en vino.'
+      ],
+      note: 'Cada experiencia es cuidadosamente planificada según disponibilidad, buscando siempre el mejor itinerario posible.',
+      quote: 'Una inmersión completa en la cultura del vino mendocino, combinando tradición, innovación y sabores auténticos.'
+    }
+  },
   { 
     title: 'Parapente en Tándem', 
-    desc: 'Vuelo sobre los Andes con fotos HD, vino y certificado', 
+    desc: 'Vuelo sobre Pedemonte Mendocino con fotos HD, vino y certificado', 
     image: imgParapente,
     alt: 'Dos personas volando en parapente tándem sobre las montañas de Mendoza',
     details: {
@@ -55,27 +78,7 @@ const experiences = [
         'Seguro contra accidentes personales',
         'Base con duchas, lockers, cambiadores'
       ],
-      note: 'Nota: Alquiler de toallones $1.500',
-      quote: ''
-    }
-  },
-  { 
-    title: 'Kayak Dique Potrerillos', 
-    desc: 'Actividad placentera en aguas tranquilas con guía', 
-    image: imgKayak,
-    alt: 'Dos personas en un kayak en un lago con montañas al fondo',
-    details: {
-      main: 'Actividad acuática placentera en el lago. Experiencia relajante rodeada de montañas.',
-      options: [
-        '⏱️ Duración de la actividad: 2 horas',
-        '🚣 Ideal para familias y grupos'
-      ],
-      includes: [
-        'Equipo completo',
-        'Traslado al perilago',
-        'Guía profesional'
-      ],
-      note: 'Ideal para familias y grupos',
+      note: '',
       quote: ''
     }
   },
@@ -150,12 +153,14 @@ const experiences = [
     details: {
       main: 'Propuestas ideales para disfrutar del agua y los paisajes de montaña de una forma relajada y divertida. Actividades guiadas pensadas para todas las edades, en entornos naturales de gran belleza.',
       options: [
+        '🚣 Kayak en el Dique Potrerillos: Actividad placentera en aguas tranquilas con guía. Duración: 2 horas.',
         '🏄 Stand Up Paddle: Navegación sobre aguas tranquilas en el Dique Potrerillos, rodeado de montañas.',
         '⛵ Paseo en Velero: Experiencia de navegación relajada para disfrutar del embalse y sus vistas panorámicas.'
       ],
       includes: [
         'Guía profesional',
         'Equipamiento completo',
+        'Traslado al perilago (en Kayak)',
         'Seguro de accidentes personales'
       ],
       note: 'Actividades ideales para familias y grupos.',

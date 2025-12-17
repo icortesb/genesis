@@ -5,25 +5,59 @@
   <div class="container max-w-2xl">
     <h2 class="text-center text-white mb-4">Planificar mi viaje</h2>
     <p class="text-center text-white/90 mb-12">Cuéntanos sobre tu experiencia ideal en Mendoza</p>
-    <form class="space-y-4">
-      <input type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-lg text-black" required />
-      <input type="email" placeholder="Tu email" class="w-full px-4 py-3 rounded-lg text-black" required />
-      <select class="w-full px-4 py-3 rounded-lg text-black" required>
+    <form id="contact-form" class="space-y-4">
+      <input id="contact-name" type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-lg text-black" required />
+      <input id="contact-email" type="email" placeholder="Tu email" class="w-full px-4 py-3 rounded-lg text-black" required />
+      <select id="contact-experience" class="w-full px-4 py-3 rounded-lg text-black" required>
         <option value="">Selecciona una experiencia</option>
+                <option>Experiencia Enológica en Mendoza</option>
                 <option>Parapente en Tándem</option>
                 <option>Rafting Río Mendoza</option>
-                <option>Kayak Dique Potrerillos</option>
                 <option>Aventura y Adrenalina (Canopy, Paracaidismo)</option>
                 <option>Trekking en la Cordillera</option>
                 <option>Cabalgatas en Mendoza</option>
                 <option>Experiencias Acuáticas (Stand Up Paddle, Velero)</option>
                 <option>Experiencias Panorámicas y Exclusivas (Helicóptero, Aconcagua)</option>
-                <option>Hospedajes</option>
-                <option>Traslados</option>
+                <option>Alojamientos</option>
                 <option>Consulta General / Otro</option>
       </select>
-      <textarea placeholder="Cuéntanos más..." rows="5" class="w-full px-4 py-3 rounded-lg text-black"></textarea>
+      <textarea id="contact-message" placeholder="Cuéntanos más sobre tu viaje..." rows="5" class="w-full px-4 py-3 rounded-lg text-black"></textarea>
       <button type="submit" class="w-full btn bg-brand-orange text-white font-bold hover:bg-brand-orange/90">Enviar Consulta</button>
     </form>
   </div>
 </section>
+
+<script>
+  document.getElementById('contact-form')?.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenimos el envío tradicional del formulario
+
+    // Obtenemos los valores de los campos
+    const nameInput = document.getElementById('contact-name') as HTMLInputElement;
+    const emailInput = document.getElementById('contact-email') as HTMLInputElement;
+    const experienceInput = document.getElementById('contact-experience') as HTMLSelectElement;
+    const messageInput = document.getElementById('contact-message') as HTMLTextAreaElement;
+
+    const name = nameInput.value;
+    const email = emailInput.value;
+    const experience = experienceInput.value;
+    const message = messageInput.value;
+    const phoneNumber = '5492616358297';
+
+    // Construimos el mensaje para WhatsApp
+    let whatsappMessage = `¡Hola! 👋 Mi nombre es ${name}.`;
+    if (experience) {
+      whatsappMessage += `\n\nQuisiera consultar por la experiencia: *${experience}*.`;
+    }
+    if (message) {
+      whatsappMessage += `\n\nMi consulta es: ${message}`;
+    }
+    if (email) {
+      whatsappMessage += `\n\nMi email de contacto es: ${email}`;
+    }
+
+    // Codificamos el mensaje para la URL y abrimos WhatsApp
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+  });
+</script>
