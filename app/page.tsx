@@ -492,7 +492,7 @@ export default function Home() {
               <h6 className="font-semibold mb-4">Contacto</h6>
               <ul className="space-y-2 text-sm text-primary-foreground/80">
                 <li>Instagram</li>
-                <li>Facebook</li>
+                {/* <li>Facebook</li> */}
                 <li>WhatsApp</li>
               </ul>
             </div>

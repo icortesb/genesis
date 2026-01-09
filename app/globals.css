@@ -14,7 +14,7 @@
   --secondary: #96803a;
 
   --sand: #f4ede4;
-  --background: oklch(1 0 0);
+  --background: linear-gradient(135deg, #faf8f5 0%, #ffffff 50%, #f9f6f1 100%);
   --foreground: oklch(0.145 0 0);
 
   --card: oklch(1 0 0);
@@ -55,7 +55,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 50%, #1c1812 100%);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);

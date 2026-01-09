@@ -1,6 +1,5 @@
 ---
-import '../styles/globals.css';
-
+import '../styles/globals.css';import WhatsAppButton from '../components/WhatsAppButton.astro';
 const { title, description = 'Vivenciando Mendoza - Creadores de Felicidad en Mendoza' } = Astro.props;
 ---
 
@@ -16,7 +15,8 @@ const { title, description = 'Vivenciando Mendoza - Creadores de Felicidad en M
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
   </head>
-  <body class="bg-slate-50 text-gray-900">
+  <body class="bg-gradient-to-br from-[#fff4e6] via-[#fffaf0] to-[#ffe8cc]">
     <slot />
+    <WhatsAppButton />
   </body>
 </html>
