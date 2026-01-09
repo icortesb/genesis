@@ -1,7 +1,7 @@
 "use client"
 
 export function WhatsAppButton() {
-  const phoneNumber = "541158583740" // Formato internacional
+  const phoneNumber = "5492616358297" // Formato internacional
   const message = encodeURIComponent("Hola! Me gustaría obtener más información.")
 
   const handleClick = () => {
